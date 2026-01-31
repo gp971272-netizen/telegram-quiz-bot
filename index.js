@@ -1,8 +1,7 @@
-const express = require("express");
-const app = express();
 const TelegramBot = require('node-telegram-bot-api');
 const admin = require('firebase-admin');
-
+const express = require("express");
+const app = express();
 // ===== TELEGRAM TOKEN =====
 const token = "8200781036:AAEkYdvjM2QIGWpj-f8B-SVPyUlwv_7WtTk";
 
@@ -49,6 +48,9 @@ bot.onText(/\/balance/, (msg) => {
 });
 app.get("/", (req, res) => {
   res.send("Bot is running");
+});
+app.listen(3000, () => {
+  console.log("Server started");
 });
 
 const PORT = process.env.PORT || 3000;
