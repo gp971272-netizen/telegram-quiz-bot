@@ -1,3 +1,5 @@
+const express = require("express");
+const app = express();
 const TelegramBot = require('node-telegram-bot-api');
 const admin = require('firebase-admin');
 
@@ -44,4 +46,12 @@ bot.onText(/\/balance/, (msg) => {
   db.ref("users/" + id + "/balance").once("value", snap => {
     bot.sendMessage(id, `💰 Balance: ₹${snap.val() || 0}`);
   });
+});
+app.get("/", (req, res) => {
+  res.send("Bot is running");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
 });
