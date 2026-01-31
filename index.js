@@ -49,9 +49,6 @@ bot.onText(/\/balance/, (msg) => {
 app.get("/", (req, res) => {
   res.send("Bot is running");
 });
-app.listen(3000, () => {
-  console.log("Server started");
-});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
