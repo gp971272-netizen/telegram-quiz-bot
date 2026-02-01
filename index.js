@@ -3,7 +3,7 @@ const admin = require('firebase-admin');
 const express = require("express");
 const app = express();
 // ===== TELEGRAM TOKEN =====
-const token = "8200781036:AAEkYdvjM2QIGWpj-f8B-SVPyUlwv_7WtTk";
+const token = "8200781036:AAHkoKh6HQPg1WZoz08R-D1u_x3cT7y65w8";
 
 // ===== FIREBASE SETUP =====
 const serviceAccount = require("./firebase-key.json");
