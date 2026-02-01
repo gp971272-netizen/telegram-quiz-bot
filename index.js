@@ -13,7 +13,7 @@ const serviceAccount = require(process.env.GOOGLE_APPLICATION_CREDENTIALS || "./
 // Firebase init
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com/"
+  databaseURL: "https://telegramquizbot-e5752-default-rtdb.firebaseio.com/"
 });
 
 const db = admin.database();
