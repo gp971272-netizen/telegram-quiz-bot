@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 3000;
 // Telegram Token (BotFather se mila)
 const token = process.env.BOT_TOKEN;
 
+// ===== FIREBASE SETUP =====
+const serviceAccount = require(process.env.GOOGLE_APPLICATION_CREDENTIALS || "./firebase-key.json");
 // Firebase init
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
