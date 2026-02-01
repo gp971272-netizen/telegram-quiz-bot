@@ -45,7 +45,6 @@ bot.onText(/\/balance/, (msg) => {
   db.ref("users/" + id + "/balance").once("value", snap => {
     bot.sendMessage(id, `💰 Balance: ₹${snap.val() || 0}`);
   });
-});
 app.get("/", (req, res) => {
   res.send("Bot is running");
 });
